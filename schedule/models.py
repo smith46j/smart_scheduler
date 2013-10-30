@@ -53,7 +53,7 @@ class DailyRequirements(models.Model):
 
 class Schedule(models.Model):
     class Meta:
-        ordering = 'date'
+        ordering = ['date']
 
     date = models.DateField()
     requirements = models.ForeignKey('DailyRequirements')
