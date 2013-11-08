@@ -9,7 +9,7 @@ class Employee(models.Model):
     min_hours = models.IntegerField()
     max_hours = models.IntegerField()
     target_hours = models.IntegerField()
-    position = models.ForeignKey('Position')
+    position = models.ManyToManyField('Position')
 
     def __unicode__(self):
         return u'{first} {last}'.format(first=self.first_name, last=self.last_name)
@@ -52,7 +52,7 @@ class PositionRequirements(models.Model):
         ordering = ''
         verbose_name_plural = 'Position Requirements'
 
-    postion = models.ForeignKey('Position')
+    position = models.ForeignKey('Position')
     min_employees = models.IntegerField()
     max_employees = models.IntegerField()
 
