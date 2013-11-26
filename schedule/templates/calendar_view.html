@@ -1,2 +1,10 @@
 <p> This is where someone could make it display all the shifts in a cool way? make each
 A moveable object, so that they could play with the schedule? </p>
+
+<p> This is how you would loop through an object</p>
+<p>Every things else in this file is HTML or inline css or javascript whatever you need</p>
+<p>for template stuff go to https://docs.djangoproject.com/en/1.6/ref/templates/builtins/ </p>
+
+{% for shift in all_shifts_today %}
+    {{ shift }}
+{% endfor %}
