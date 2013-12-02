@@ -76,7 +76,7 @@ class Schedule(models.Model):
         ordering = ['date']
 
     date = models.DateField()
-    requirements = models.ForeignKey('DailyRequirements')
+    requirements = models.ManyToManyField('DailyRequirements')
 
     def __unicode__(self):
         return u'{date} {req}'.format(date=self.date, req=self.requirements)
