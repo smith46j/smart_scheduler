@@ -9,7 +9,7 @@ class Employee(models.Model):
     min_hours = models.IntegerField()
     max_hours = models.IntegerField()
     target_hours = models.IntegerField()
-    position = models.ManyToManyField('Position')
+    position = models.ForeignKey('Position')
 
     def __unicode__(self):
         return u'{first} {last}'.format(first=self.first_name, last=self.last_name)
